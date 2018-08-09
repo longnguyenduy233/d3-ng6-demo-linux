@@ -1,0 +1,10 @@
+<svg:g (click)="focusOnNode()" (mouseover)="mouseOverOnNode()" (mouseout)="mouseoutOnNode()" *ngIf="node.visibility" [attr.transform]="'translate(' + node.x + ',' + node.y + ')'">
+  <svg:circle  class="node" [attr.fill]="node.color" cx="0" cy="0" [attr.r]="nodeRadius">
+  </svg:circle>
+  <svg:text class="node-name" [attr.font-size]="node.fontSize">
+    {{node.id}}
+  </svg:text>
+  <svg:text class="node-name entityName" [attr.font-size]="node.fontSize" x="0" y="32">
+    {{node.name}}
+  </svg:text>
+</svg:g>

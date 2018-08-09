@@ -1,0 +1,26 @@
+<div class="d-flex flex-row align-self-end mt-2 ml-3">
+  <button class="btn">
+    <i class="fa fa-search"></i>
+  </button>
+  <input type="search" placeholder="Search Entity Name" />
+  <button class="btn btn-primary d-flex align-self-end ml-1" (click)="addEntity()">
+    + Create Entity
+  </button>
+  <button class="btn btn-warning d-flex align-self-end ml-1" (click)="zoomFit()">
+    Fit
+  </button>
+</div>
+<div class="d-flex flex-row">
+  <svg #svgSubArea class="svgSubArea">
+    <svg:g *ngFor="let node of nodes" (click)="selectZoom(node)" [attr.transform]="'translate(' + node.x + ',' + node.y + ')'">
+      <svg:circle class="node" [attr.fill]="node.color" cx="0" cy="0" [attr.r]="20">
+      </svg:circle>
+      <svg:text class="node-name" [attr.font-size]="node.fontSize">
+        {{node.id}}
+      </svg:text>
+    </svg:g>
+    <!-- <g [nodeVisual]="node" *ngFor="let node of nodes" (click)="selectZoom(node)"></g> -->
+  </svg>
+</div>
+<div class="dropdown-divider"></div>
+<app-legends-visual></app-legends-visual>

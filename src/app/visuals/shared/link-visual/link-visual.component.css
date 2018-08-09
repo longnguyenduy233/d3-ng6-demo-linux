@@ -1,0 +1,10 @@
+.link {
+    stroke-width: 3;
+    stroke:rgb(178, 106, 105);
+}
+.link-overlay {
+    stroke-width: 18;
+    stroke:rgb(178, 106, 105);
+    opacity: 0;
+    cursor: pointer;
+}

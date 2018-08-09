@@ -1,0 +1,12 @@
+<svg #svg [attr.width]="_options.width" [attr.height]="_options.height">
+    <defs>
+        <marker id="arrow" viewBox="0 -5 10 10" markerWidth="3" markerHeight="3" [attr.refX]="endArrowPosition" orient="auto">
+            <path d="M0,-5L10,0L0,5" fill="#000" class="end-arrow" />
+        </marker>
+    </defs>
+      <g [zoomableOf]="svg">
+          <g [linkVisual]="link" *ngFor="let link of links"></g>
+          <g [nodeVisual]="node" *ngFor="let node of nodes"
+          [draggableNode]="node" [draggableInGraph]="graph"></g>
+      </g>
+    </svg>

@@ -1,0 +1,10 @@
+<div class="d-flex flex-column svgLegendsContainer">
+  <label>Legends: ON</label>
+  <div>
+    <svg #svgLegends class="svgLegends">
+      <svg:g [legendsNodeVisual]="node" [legendsNodeVisualEntities]="entities" *ngFor="let node of nodes" [attr.transform]="'translate(' + node.x + ',' + node.y + ')'">
+      </svg:g>
+      <!-- <g [nodeVisual]="node" *ngFor="let node of nodes" (click)="selectZoom(node)"></g> -->
+    </svg>
+  </div>
+</div>

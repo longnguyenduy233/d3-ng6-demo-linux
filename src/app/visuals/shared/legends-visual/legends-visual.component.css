@@ -1,0 +1,15 @@
+.svgLegends {
+  width: 80px;
+  /* height: 100%; */
+  /* z-index: 999; */
+  min-height: 400px;
+  /* transition: none; */
+}
+.svgLegendsContainer {
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    /* background: #FEE; */
+    /* overflow: scroll; */
+}
+

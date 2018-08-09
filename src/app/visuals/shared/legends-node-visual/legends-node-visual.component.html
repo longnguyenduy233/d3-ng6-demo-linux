@@ -1,0 +1,7 @@
+<svg:g #legendsNode (click)="changeVisibility()">
+  <svg:circle stroke="black" stroke-width="1" fill="white" cx="0" cy="0" r="10">
+  </svg:circle>
+  <svg:text [attr.font-size]="node.fontSize" x="15" y="5">
+    {{"#"+node.linkCount}}
+  </svg:text>
+</svg:g>
